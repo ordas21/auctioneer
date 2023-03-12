@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse style="stroke: rgb(0, 0, 0); paint-order: fill; stroke-width: 15px; fill: none;" cx="250" cy="250" rx="200" ry="200" bx:origin="0.502049 0.502049"/>
+  <path d="M 249.98 66.438 L 404.372 348.962 L 95.588 348.962 L 249.98 66.438 Z" style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 15px;" bx:shape="triangle 95.588 66.438 308.784 282.524 0.5 0 1@ad24f897" bx:origin="0.5 0.499937"/>
+  <rect x="179.959" y="208.583" width="140" height="140" style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 15px;"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 15px;" cx="250" cy="278" rx="57.5" ry="57.5"/>
+</svg>

@@ -6,6 +6,13 @@ export const RegisterComp = () => {
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState('');
 
+
+  const nameRef = useRef();
+  const streetAddressRef = useRef();
+  const cityRef = useRef();
+  const stateRef = useRef();
+  const zipCodeRef = useRef();
+  const phoneNumberRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const cmfPasswordRef = useRef();
@@ -23,11 +30,14 @@ export const RegisterComp = () => {
     }
 
     try {
-      await register(emailRef.current.value, passwordRef.current.value);
+      await register(nameRef.current.value, emailRef.current.value, passwordRef.current.value, streetAddressRef.current.value, cityRef.current.value, stateRef.current.value, zipCodeRef.current.value, phoneNumberRef.current.value);
       closeForm();
     } catch (error) {
       setError(error.message);
     }
+
+    
+
   };
 
   return (
@@ -43,8 +53,32 @@ export const RegisterComp = () => {
           <Modal.Body>
             {error && <Alert variant="danger">{error}</Alert>}
             <Form.Group>
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" required ref={nameRef} />
+            </Form.Group>
+            <Form.Group>
               <Form.Label>Email Address</Form.Label>
               <Form.Control type="email" required ref={emailRef} />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Street Address</Form.Label>
+              <Form.Control type="text" required ref={streetAddressRef} />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>City</Form.Label>
+              <Form.Control type="text" required ref={cityRef} />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>State</Form.Label>
+              <Form.Control type="text" required ref={stateRef} />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Zip Code</Form.Label>
+              <Form.Control type="text" required ref={zipCodeRef} />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control type="text" required ref={phoneNumberRef} />
             </Form.Group>
             <Form.Group>
               <Form.Label>Password</Form.Label>
